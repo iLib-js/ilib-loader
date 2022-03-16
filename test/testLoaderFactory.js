@@ -18,10 +18,10 @@
  */
 
 import { setPlatform } from 'ilib-env';
-import LoaderFactory, { registerLoader } from '../src/index';
+import LoaderFactory, { registerLoader } from '../src/index.js';
 import MockLoader from './MockLoader';
 
-module.exports.testLoaderFactory = {
+const testLoaderFactory = {
     testLoaderFactoryNode: function(test) {
         test.expect(2);
         setPlatform("nodejs");
@@ -51,3 +51,5 @@ module.exports.testLoaderFactory = {
         test.done();
     }
 };
+
+export default testLoaderFactory;

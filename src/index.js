@@ -78,4 +78,5 @@ function LoaderFactory() {
     return undefined;
 };
 
+export * from './Loader';
 export default LoaderFactory;

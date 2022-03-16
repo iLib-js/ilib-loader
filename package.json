@@ -1,8 +1,8 @@
 {
+    "type": "module",
     "name": "ilib-loader",
     "version": "1.0.0",
-    "main": "./lib/index.js",
-    "main-es6": "./src/index.js",
+    "main": "./src/index.js",
     "description": "Loader to load iLib locale data",
     "keywords": [
         "internationalization",
@@ -46,8 +46,8 @@
     },
     "scripts": {
         "build": "npm run build:prod",
-        "build:prod": "grunt babel --mode=prod",
-        "build:dev": "grunt babel --mode=dev",
+        "build:prod": "grunt babel --mode=prod --gruntfile Gruntfile.cjs ; cp package-commonjs.json lib/package.json",
+        "build:dev": "grunt babel --mode=dev --gruntfile Gruntfile.cjs ; cp package-commonjs.json lib/package.json",
         "build:web": "webpack-cli",
         "build:test": "webpack-cli --config webpack-test.config.js",
         "dist": "npm run doc ; npm run build:prod ; npm run build:web; npm pack",

@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-module.exports.files = [
+export const files = [
     "testLoaderFactory.js",
     "testLoader.js"
 ];

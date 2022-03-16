@@ -31,7 +31,7 @@ import Loader from '../src/Loader';
  * @private
  * @constructor
  */
-export default class MockLoader extends Loader {
+class MockLoader extends Loader {
     /**
      * Create a loader instance.
      *
@@ -69,3 +69,5 @@ export default class MockLoader extends Loader {
         return new Promise((resolve, reject) => setTimeout(resolve, 100, text));
     }
 };
+
+export default MockLoader;
